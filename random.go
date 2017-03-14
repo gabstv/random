@@ -5,9 +5,9 @@ import (
 )
 
 func Int(min, max int) int {
-	return rand.Intn(max) - min
+	return rand.Intn(max-min) + min
 }
 
 func Float64(min, max float64) float64 {
-	return (rand.Float64() * max) - min
+	return (rand.Float64() * (max - min)) + min
 }
